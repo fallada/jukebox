@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Jukebox</title>
+  </head>
+  <body>
+    <h1>Jukebox</h1>
+     <form action="upload_files" method="post" enctype="multipart/form-data">
+         <label for="mp3_files"> Lade Deine Lieblings-MP3s hoch:</label>
+         <input type="file" name="mp3_files" multiple>
+         <input type="submit" value="Submit">
+      </form>
+    
+    <p>Now Playing: {{ now_playing }} <a href="playnext/{{ f_name }}">[Play Next Song]</a>  </p>
+    <p>All Songs:
+        <ul>
+        {% for f_name, likes in all_songs: %}
+          <li><a href="play/{{ f_name }}">[p]</a>{{ f_name }} ({{ likes }}) <a href="like/{{ f_name }}">[I like!]</a></li>
+        {% endfor %}
+        </ul>
+    </p>
+    <p>
+    <a href="stop_playing">Stop Playing</a>
+    </p>
+    <p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <hr>
+    DELETE SONGS - HANDLE WITH CARE
+        <ul>
+        {% for f_name, likes in all_songs: %}
+          <li>{{ f_name }} ({{ likes }})<a href="delete/{{ f_name }}">[delete]</a></li>
+        {% endfor %}
+        </ul>
+    
+  </body>
+</html>
