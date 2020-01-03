@@ -1,2 +1,2 @@
-WEB_SERVER_ADDRESS: '0.0.0.0:8001'
+WEB_SERVER_ADDRESS: '0.0.0.0:80'
 AMQP_URI: 'pyamqp://guest:guest@localhost'
