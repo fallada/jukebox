@@ -1,5 +1,5 @@
 # jukebox
-Jukebox for Parties
+Jukebox for Parties: Everybody can upload songs and vote them up with "likes". Jukebox plays randomly all songs and takes into account how many likes a song has.
 
 Tested on Ubuntu and Raspbian with Raspberry Pi 4
 
